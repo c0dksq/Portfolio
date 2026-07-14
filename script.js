@@ -5,25 +5,23 @@
    ================================================================ */
 
 const SITE = {
-  name: "Juno Reyes",
-  role: "Visual & Brand Designer",
-  tagline: "I design identities, packaging, and digital experiences for brands that want to feel handmade, not templated.",
+  name: "c0d Design",
+  role: "Graphic's Designer",
+  tagline: "I design pieces that theoretically could be used",
 
-  about: "I'm a designer based in Lisbon, working across branding, editorial, and interactive projects. My process starts on paper — mood boards, type studies, and a lot of crossed-out sketches — before anything touches a screen. I like clients who aren't afraid of a strong opinion.",
+  about: "I'm a 17 Year Old Graphic Designer based in England. I curently study Graphic Design Level 3 at my local College, in which I am hoping to take further and study at a University",
 
   facts: [
-    { label: "Based in", value: "Lisbon, PT" },
-    { label: "Experience", value: "7 years" },
-    { label: "Focus", value: "Branding, Editorial, UI" },
-    { label: "Available", value: "Sept 2026" }
+    { label: "Based in", value: "England, PT" },
+    { label: "Experience", value: "3 years" },
+    { label: "Focus", value: "Graphic Design" }
   ],
 
-  email: "hello@junoreyes.design",
+  email: "....",
 
   social: [
     { label: "Instagram", url: "https://instagram.com" },
-    { label: "Dribbble", url: "https://dribbble.com" },
-    { label: "LinkedIn", url: "https://linkedin.com" }
+    { label: "TikTok", url: "https://dribbble.com" }
   ]
 };
 
