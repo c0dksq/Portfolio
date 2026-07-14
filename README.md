@@ -1,26 +1,6 @@
-# Portfolio Site
+# How do i work this guide
 
-A static portfolio site (plain HTML/CSS/JS — no build step) made to run on GitHub Pages.
-
-## Put it on GitHub Pages
-
-1. Create a new repository on GitHub (public, or private if you have Pages access on your plan).
-   - **Personal/root site** (`yourname.github.io`): name the repo exactly `yourusername.github.io`.
-   - **Project site** (`yourusername.github.io/portfolio`): name it whatever you like, e.g. `portfolio`.
-2. Upload these files to the repo (drag-and-drop on github.com works, or use `git`):
-   ```
-   index.html
-   work.html
-   project-template.html
-   style.css
-   script.js
-   README.md
-   ```
-3. In the repo, go to **Settings → Pages**.
-4. Under "Build and deployment", set **Source** to `Deploy from a branch`, branch `main`, folder `/ (root)`. Save.
-5. GitHub will give you a URL (usually live within a minute or two) — that's your site.
-
-Any time you push new changes to `main`, the live site updates automatically.
+A guide to remind myself how to work this thing
 
 ## Pages
 
