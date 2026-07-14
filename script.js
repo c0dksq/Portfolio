@@ -12,7 +12,7 @@ const SITE = {
   about: "I'm a 17 Year Old Graphic Designer based in England. I curently study Graphic Design Level 3 at my local College, in which I am hoping to take further and study at a University",
 
   facts: [
-    { label: "Based in", value: "England, PT" },
+    { label: "Based in", value: "England, UK" },
     { label: "Experience", value: "3 years" },
     { label: "Focus", value: "Graphic Design" }
   ],
