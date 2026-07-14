@@ -63,9 +63,7 @@ Two looping animations drive the bold feel: the giant name banner in the hero, a
 - Nav links live in the `<nav class="nav__links">` block at the top of both `index.html` and `work.html` — edit both if you rename a section.
 - Social/contact buttons come from `SITE.social` in `script.js` — add or remove entries there.
 
-## Local preview
 
-No build tools needed. Just open `index.html` directly in a browser, or run a tiny local server from the folder:
 ```
 python3 -m http.server 8000
 ```
