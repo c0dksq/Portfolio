@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+<meta name="description" content="Design & creative portfolio">
+
+<!-- Fonts: Anton (display), Space Grotesk (body), JetBrains Mono (labels) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a href="#top" class="nav__mark">JR</a>
+  <nav class="nav__links">
+    <a href="work.html">Work</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+  <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span>
+  </button>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero__marquee" aria-hidden="true">
+      <div class="hero__marquee-track" id="heroMarqueeTrack"></div>
+    </div>
+    <div class="hero__foot">
+      <p class="hero__role" id="heroRole"></p>
+      <p class="hero__tagline" id="heroTagline"></p>
+      <a href="work.html" class="hero__scroll">See the work ↓</a>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track" id="tickerTrack"></div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="section-head">
+      <span class="section-label">About</span>
+    </div>
+    <div class="about__body">
+      <p class="about__lead" id="aboutText"></p>
+      <ul class="about__facts" id="aboutFacts"></ul>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="section-head">
+      <span class="section-label">Get In Touch</span>
+    </div>
+    <a class="contact__email" id="contactEmail" href="#"></a>
+    <div class="contact__social" id="contactSocial"></div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span id="footerName"></span>
+  <span>Built with GitHub Pages</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

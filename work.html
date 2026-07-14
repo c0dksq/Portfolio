@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Work — Portfolio</title>
+<meta name="description" content="Full project archive">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a href="index.html" class="nav__mark">JR</a>
+  <nav class="nav__links">
+    <a href="work.html">Work</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+  <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span>
+  </button>
+</header>
+
+<main>
+
+  <!-- PAGE HEADER -->
+  <section class="work-header">
+    <div class="section-head">
+      <span class="section-label" id="workCount">Selected Work</span>
+      <h2>Every project<br>I've shipped</h2>
+      <p class="section-sub">Click any project below for the full story.</p>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track" id="tickerTrack"></div>
+  </div>
+
+  <!-- FULL WORK LIST -->
+  <section class="work" id="work">
+    <div class="stack" id="projectStack"></div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span id="footerName"></span>
+  <span>Built with GitHub Pages</span>
+</footer>
+
+<!-- PROJECT DETAIL MODAL -->
+<div class="modal" id="modal" hidden>
+  <div class="modal__panel">
+    <button class="modal__close" id="modalClose" aria-label="Close">×</button>
+    <img class="modal__image" id="modalImage" alt="">
+    <div class="modal__body">
+      <span class="modal__category" id="modalCategory"></span>
+      <h3 id="modalTitle"></h3>
+      <p id="modalDescription"></p>
+      <a id="modalLink" href="#" target="_blank" rel="noopener">View project →</a>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- EDIT: page title shown in the browser tab -->
+<title>Project Name — Portfolio</title>
+<meta name="description" content="EDIT: one-line description of this project">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a href="index.html" class="nav__mark">JR</a>
+  <nav class="nav__links">
+    <a href="work.html">Work</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+  <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span>
+  </button>
+</header>
+
+<main>
+
+  <!-- CASE STUDY HEADER -->
+  <section class="case-header">
+    <a href="work.html" class="case-back">← Back to all work</a>
+    <!-- EDIT: category and year -->
+    <span class="section-label">Branding — 2026</span>
+    <!-- EDIT: project title -->
+    <h1 class="case-title">Project Name</h1>
+    <!-- EDIT: one-sentence summary -->
+    <p class="case-sub">A short line summing up what this project is and who it was for.</p>
+  </section>
+
+  <!-- HERO IMAGE -->
+  <section class="case-hero">
+    <!-- EDIT: swap the src for your own image. Wide images (1600x900 or similar) work best. -->
+    <img src="https://picsum.photos/seed/case-template/1600/900" alt="EDIT: describe what's shown in this image">
+  </section>
+
+  <!-- DETAILS + WRITE-UP -->
+  <section class="case-body">
+    <ul class="case-details">
+      <!-- EDIT: swap these four for whatever facts matter for this project -->
+      <li><span>Client</span><span>Client Name</span></li>
+      <li><span>Role</span><span>Your role</span></li>
+      <li><span>Year</span><span>2026</span></li>
+      <li><span>Tools</span><span>Figma, Illustrator</span></li>
+    </ul>
+
+    <div class="case-text">
+      <!-- EDIT: replace these three paragraphs with your own write-up.
+           A simple structure that works well: the brief, your process, the outcome. -->
+      <p>Start with the brief — who the client was, what problem they came to you with, and any constraints (budget, timeline, existing brand guidelines) that shaped the work.</p>
+      <p>Then walk through your process — how you approached the problem, what you explored or tried, and the key decisions that shaped the final direction.</p>
+      <p>Close with the outcome — what shipped, how it was received, and anything you'd point to as the strongest part of the result.</p>
+    </div>
+  </section>
+
+  <!-- ADDITIONAL IMAGES — delete this section if you only have one hero image -->
+  <section class="case-gallery">
+    <!-- EDIT: add, remove, or replace these <img> tags for extra project shots -->
+    <img src="https://picsum.photos/seed/case-template-2/800/600" alt="EDIT: describe this image">
+    <img src="https://picsum.photos/seed/case-template-3/800/600" alt="EDIT: describe this image">
+  </section>
+
+  <!-- BACK TO WORK -->
+  <section class="case-next">
+    <a href="work.html" class="hero__scroll">Back to all work ↓</a>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span id="footerName"></span>
+  <span>Built with GitHub Pages</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
