@@ -6,7 +6,7 @@
 
 const SITE = {
   name: "c0d Design",
-  role: "Graphic's Designer",
+  role: "Graphic Designer",
   tagline: "I design pieces that theoretically could be used",
 
   about: "I'm a 17 Year Old Graphic Designer based in England. I curently study Graphic Design Level 3 at my local College, in which I am hoping to take further and study at a University",
@@ -17,7 +17,7 @@ const SITE = {
     { label: "Focus", value: "Graphic Design" }
   ],
 
-  email: "....",
+  email: "c0ddesign@outlook.com",
 
   social: [
     { label: "Instagram", url: "https://instagram.com" },
