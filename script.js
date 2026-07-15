@@ -34,11 +34,11 @@ const SITE = {
    project" button will just stay hidden until you add a real one. */
 const PROJECTS = [
   {
-    title: "Marea Coffee Rebrand",
-    category: "Branding",
-    year: "2025",
+    title: "Isle Of Wight Gin",
+    category: "Advertising",
+    year: "2026",
     image: "https://picsum.photos/seed/marea/800/1000",
-    description: "A full identity refresh for a Lisbon coffee roaster — packaging, signage, and a hand-drawn wordmark inspired by tide charts.",
+    description: "I had the oppurtunity to create unique bus stop design's to be used by Isle Of Wight Gin",
     link: "#"
   },
   {
