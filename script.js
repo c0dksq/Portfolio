@@ -37,7 +37,7 @@ const PROJECTS = [
     title: "Isle Of Wight Gin",
     category: "Advertising",
     year: "2026",
-    image: "https://picsum.photos/seed/marea/800/1000",
+    image: "image/IOWGIN.jpg",
     description: "I had the oppurtunity to create unique bus stop design's to be used by Isle Of Wight Gin",
     link: "#"
   },
