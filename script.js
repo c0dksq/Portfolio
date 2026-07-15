@@ -39,7 +39,7 @@ const PROJECTS = [
     year: "2026",
     image: "image/IOWGIN.jpg",
     description: "I had the oppurtunity to create unique bus stop design's to be used by Isle Of Wight Gin",
-    link: "#"
+    link: "iowgin.html"
   },
   {
     title: "Fieldnotes Magazine",
