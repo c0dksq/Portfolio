@@ -42,12 +42,12 @@ const PROJECTS = [
     link: "iowgin.html"
   },
   {
-    title: "Fieldnotes Magazine",
-    category: "Editorial",
+    title: "People Watching: Album Cover",
+    category: "Album Cover",
     year: "2025",
-    image: "https://picsum.photos/seed/fieldnotes/800/1000",
-    description: "Art direction and layout system for a quarterly travel journal, built around a modular grid and a single display typeface.",
-    link: "#"
+    image: "image/sfvf1",
+    description: "This was part of my first term college project, in which I created a album cover based on Sam Fenders Album",
+    link: "pwac.html"
   },
   {
     title: "Loop Studio Website",
