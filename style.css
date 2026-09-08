@@ -563,12 +563,13 @@ img { max-width: 100%; display: block; }
 }
 
 .case-hero img {
-  width: 100%;
-  max-width: var(--max-w);
-  margin: 0 auto;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  display: block;
+ width: 100%;
+ max-width: var(--max-w);
+ margin: 0 auto;
+ aspect-ratio: 16 / 9;
+ object-fit: contain;
+ background: var(--ink);   /* fills the letterbox space */
+ display: block;
 }
 
 .case-body {
@@ -620,9 +621,10 @@ img { max-width: 100%; display: block; }
 }
 
 .case-gallery img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+ width: 100%;
+ aspect-ratio: 4 / 3;
+ object-fit: contain;
+ background: var(--ink);   /* fills the letterbox space */
 }
 
 .case-next {
