@@ -568,7 +568,7 @@ img { max-width: 100%; display: block; }
  margin: 0 auto;
  aspect-ratio: 16 / 9;
  object-fit: contain;
- background: var(--ink);   /* fills the letterbox space */
+ background: var(--paper);   /* fills the letterbox space */
  display: block;
 }
 
@@ -624,7 +624,7 @@ img { max-width: 100%; display: block; }
  width: 100%;
  aspect-ratio: 4 / 3;
  object-fit: contain;
- background: var(--ink);   /* fills the letterbox space */
+ background: var(--paper);   /* fills the letterbox space */
 }
 
 .case-next {
