@@ -45,7 +45,7 @@ const PROJECTS = [
     title: "People Watching: Album Cover",
     category: "Album Cover",
     year: "2025",
-    image: "image/sfvf1",
+    image: "image/sfvf1.jpg",
     description: "This was part of my first term college project, in which I created a album cover based on Sam Fenders Album",
     link: "pwac.html"
   },
