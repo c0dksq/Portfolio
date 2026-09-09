@@ -58,12 +58,12 @@ const PROJECTS = [
     link: "caradvert.html"
   },
   {
-    title: "Verano Type Specimen",
-    category: "Type Design",
-    year: "2024",
+    title: "Matchday Posters: Man City",
+    category: "Social Media",
+    year: "2026-27",
     image: "https://picsum.photos/seed/verano/800/1000",
-    description: "A self-initiated specimen booklet for an original display typeface, exploring warm-weather editorial layouts.",
-    link: "#"
+    description: "I have Challenged myself to create a poster for every single match Manchester City Play in the 26-27 football season",
+    link: "everymatchday.html"
   },
   {
     title: "Nomad Records Packaging",
