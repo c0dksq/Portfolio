@@ -17,7 +17,7 @@ const SITE = {
     { label: "Focus", value: "Graphic Design" }
   ],
 
-  email: "codybigmac7@outlook.com",
+  email: "contact@c0ddesign.co.uk",
 
   social: [
     { label: "Instagram", url: "https://www.instagram.com/c0dgd/" },
