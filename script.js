@@ -66,12 +66,12 @@ const PROJECTS = [
     link: "everymatchday.html"
   },
   {
-    title: "Nomad Records Packaging",
-    category: "Packaging",
-    year: "2023",
-    image: "https://picsum.photos/seed/nomad/800/1000",
-    description: "Vinyl sleeve and merch design for an independent record label's debut compilation.",
-    link: "#"
+    title: "Jurassic Park - Book Cover",
+    category: "Book Cover",
+    year: "2025",
+    image: "image/book/FInalllev2v2v2v2v22.jpg",
+    description: "This was the first project I completed for A1 Skills on my college course. In which I had to create a book cover that used a heavy mix of traditional and digital methods.",
+    link: "jurassicbook.html"
   },
   {
     title: "Atlas Wayfinding System",
