@@ -80,6 +80,14 @@ const PROJECTS = [
     image: "image/nhm/Final_Ocean.png",
     description: "This was my big project as part of my A2 project at the end of year, in which I had to create advertisment posters for The Natural History Museum.",
     link: "nhm.html"
+  },
+  {
+    title: "COMING SOON",
+    category: "...",
+    year: "...",
+    image: "image/nhm/Final_Ocean.png",
+    description: "This was my big project as part of my A2 project at the end of year, in which I had to create advertisment posters for The Natural History Museum.",
+    link: "nhm.html"
   }
 ];
 
