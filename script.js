@@ -74,12 +74,12 @@ const PROJECTS = [
     link: "jurassicbook.html"
   },
   {
-    title: "Atlas Wayfinding System",
-    category: "Signage",
-    year: "2023",
-    image: "https://picsum.photos/seed/atlas/800/1000",
-    description: "A wayfinding and signage system for a co-working space, using a color-coded floor language.",
-    link: "#"
+    title: "National History Museum",
+    category: "Advertisement",
+    year: "2026",
+    image: "image/nhm/Finale_Ocean.png",
+    description: "This was my big project as part of my A2 project at the end of year, in which I had to create advertisment posters for The Natural History Museum.",
+    link: "nhm.html"
   }
 ];
 
