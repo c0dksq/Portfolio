@@ -82,6 +82,14 @@ const PROJECTS = [
     link: "nhm.html"
   },
   {
+    title: "Minecraft: Photography",
+    category: "Experimentation",
+    year: "2026",
+    image: "image/Artboard 18.png",
+    description: "This was a personal project inspired by the Painting's inside of Minecraft",
+    link: "mciow.html"
+  },
+  {
     title: "COMING SOON",
     category: "...",
     year: "...",
