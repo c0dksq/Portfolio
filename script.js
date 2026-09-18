@@ -38,7 +38,7 @@ const PROJECTS = [
     category: "Advertising",
     year: "2026",
     image: "image/IOWGIN.jpg",
-    description: "I had the oppurtunity to create unique bus stop design's to be used by Isle Of Wight Gin",
+    description: "I had the opportunity to create unique bus stop designs to be used by Isle Of Wight Gin",
     link: "iowgin.html"
   },
   {
@@ -46,7 +46,7 @@ const PROJECTS = [
     category: "Album Cover",
     year: "2025",
     image: "image/sfvf1.jpg",
-    description: "This was part of my first term college project, in which I created a album cover based on Sam Fenders Album.",
+    description: "This was part of my first-term college project, in which I created an album cover based on Sam Fender's album.",
     link: "pwac.html"
   },
   {
@@ -54,7 +54,7 @@ const PROJECTS = [
     category: "Advertising",
     year: "2025",
     image: "image/beetleland.jpg",
-    description: "This was part of my first term college project, in which I created a poster for car brand Volkswagen.",
+    description: "This was part of my first-term college project, in which I created a poster for the car brand Volkswagen.",
     link: "caradvert.html"
   },
   {
@@ -62,7 +62,7 @@ const PROJECTS = [
     category: "Social Media",
     year: "2026-27",
     image: "image/matchday26/matchdaybanner.jpg",
-    description: "I have Challenged myself to create a poster for every single match Manchester City Play in the 26-27 football season",
+    description: "I have challenged myself to create a poster for every single match Manchester City Play in the 26-27 football season",
     link: "everymatchday.html"
   },
   {
@@ -70,7 +70,7 @@ const PROJECTS = [
     category: "Book Cover",
     year: "2025",
     image: "image/book/FInalllev2v2v2v2v22.jpg",
-    description: "This was the first project I completed for A1 Skills on my college course. In which I had to create a book cover that used a heavy mix of traditional and digital methods.",
+    description: "This was the first project I completed for A1 Skills on my college course, in which I had to create a book cover that used a heavy mix of traditional and digital methods.",
     link: "jurassicbook.html"
   },
   {
@@ -78,7 +78,7 @@ const PROJECTS = [
     category: "Advertisement",
     year: "2026",
     image: "image/nhm/Final_Ocean.png",
-    description: "This was my big project as part of my A2 project at the end of year, in which I had to create advertisment posters for The Natural History Museum.",
+    description: "This was my big project as part of my A2 project at the end of the year, in which I had to create advertisement posters for the Natural History Museum.",
     link: "nhm.html"
   },
   {
@@ -86,7 +86,7 @@ const PROJECTS = [
     category: "Experimentation",
     year: "2026",
     image: "image/mc/Artboard 18.png",
-    description: "This was a personal project inspired by the Painting's inside of Minecraft",
+    description: "This was a personal project inspired by the Painting's inside Minecraft",
     link: "mciow.html"
   },
   {
