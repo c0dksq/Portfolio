@@ -9,7 +9,7 @@ const SITE = {
   role: "Graphic Designer",
   tagline: "All Of My Work :smile: ",
 
-  about: "I'm a 17 Year Old Graphic Designer based in England. I curently study Graphic Design Level 3 at my local College, in which I am hoping to take further and study at a University",
+  about: "I'm a 17-year-old graphic designer based in England. I currently study Graphic Design Level 3 at my local College, and I am hoping to take further and study at a university.",
 
   facts: [
     { label: "Based in", value: "England, UK" },
