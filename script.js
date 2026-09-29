@@ -107,10 +107,14 @@ function pad(n) { return String(n).padStart(2, "0"); }
 
 function renderHeroMarquee() {
   const track = document.getElementById("heroMarqueeTrack");
-  if (!track) return; // only present on index.html
+  if (!track) return;
 
-  const repeated = Array(8).fill(`<span>${SITE.name}</span>`).join("");
-  track.innerHTML = repeated + repeated; // doubled for seamless loop
+  const logoSolid = `<img src="image/logo/longsolid.png" alt="${SITE.name}" class="hero__marquee-logo">`;
+  const logoStroke = `<img src="image/logo/longstroke.png" alt="${SITE.name}" class="hero__marquee-logo">`;
+
+  const pair = logoSolid + logoStroke;
+  const repeated = Array(8).fill(pair).join("");
+  track.innerHTML = repeated + repeated;
 
   const roleEl = document.getElementById("heroRole");
   const taglineEl = document.getElementById("heroTagline");
