@@ -69,7 +69,7 @@ img { max-width: 100%; display: block; }
 }
 
 .nav__logo {
-  height: 44px;   /* adjust to taste */
+  height: 72px;   /* adjust to taste */
   width: auto;
   display: block;
 }
@@ -137,9 +137,9 @@ img { max-width: 100%; display: block; }
 }
 
 .hero__marquee-track img.hero__marquee-logo {
-  height: clamp(5rem, 20vw, 16rem);
+  height: clamp(8rem, 30vw, 24rem);
   width: auto;
-  padding-right: 0.5em;
+  padding-right: 0.35em;
   display: block;
 }
 
