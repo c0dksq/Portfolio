@@ -68,6 +68,12 @@ img { max-width: 100%; display: block; }
   text-decoration: none;
 }
 
+.nav__logo {
+  height: 32px;   /* adjust to taste */
+  width: auto;
+  display: block;
+}
+
 .nav__links {
   display: flex;
   gap: 36px;
@@ -664,3 +670,6 @@ img { max-width: 100%; display: block; }
   .nav__links.is-open { max-height: 240px; }
   .nav__links a { padding: 16px var(--pad); border-top: 1px solid var(--line); }
 }
+
+
+
