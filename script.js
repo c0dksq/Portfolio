@@ -109,8 +109,8 @@ function renderHeroMarquee() {
   const track = document.getElementById("heroMarqueeTrack");
   if (!track) return;
 
-  const logoSolid = `<img src="image/logo/longsolid.png" alt="${SITE.name}" class="hero__marquee-logo">`;
-  const logoStroke = `<img src="image/logo/longstroke.png" alt="${SITE.name}" class="hero__marquee-logo">`;
+  const logoSolid = `<img src="image/logo/longlogosolid.svg" alt="${SITE.name}" class="hero__marquee-logo">`;
+  const logoStroke = `<img src="image/logo/longlogostroke.svg" alt="${SITE.name}" class="hero__marquee-logo">`;
 
   const pair = logoSolid + logoStroke;
   const repeated = Array(8).fill(pair).join("");
