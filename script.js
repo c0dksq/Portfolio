@@ -54,7 +54,7 @@ const PROJECTS = [
     category: "Advertising",
     year: "2025",
     image: "image/beetleland.jpg",
-    description: "This was part of my first-term college project, in which I created a poster for the car brand Volkswagen.",
+    description: "This was part of my first-term college project, in which I created a poster for the car brand Volkswagen*.",
     link: "caradvert.html"
   },
   {
@@ -78,7 +78,7 @@ const PROJECTS = [
     category: "Advertisement",
     year: "2026",
     image: "image/nhm/Final_Ocean.png",
-    description: "This was my big project as part of my A2 project at the end of the year, in which I had to create advertisement posters for the Natural History Museum.",
+    description: "This was my big project as part of my A2 project at the end of the year, in which I had to create advertisement posters for the Natural History Museum*.",
     link: "nhm.html"
   },
   {
