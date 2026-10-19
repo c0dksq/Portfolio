@@ -41,6 +41,14 @@ const PROJECTS = [
     description: "I had the opportunity to create unique bus stop designs to be used by Isle Of Wight Gin",
     link: "iowgin.html"
   },
+   {
+    title: "Red Squirrel Property Shop",
+    category: "Poster",
+    year: "2026",
+    image: "image/redsqu/redsquirrelRGB.jpg",
+    description: "I had the opportunity to work and create a poster & card for my local property shop",
+    link: "redsquirrel.html"
+  },
   {
     title: "People Watching: Album Cover",
     category: "Album Cover",
