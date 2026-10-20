@@ -46,7 +46,7 @@ const PROJECTS = [
     category: "Poster",
     year: "2026",
     image: "image/redsqu/redsquirrelRGB.jpg",
-    description: "I had the opportunity to work and create a poster & card for my local property shop.",
+    description: "I had the opportunity to work on and create a poster & card for my local property shop.",
     link: "redsquirrel.html"
   },
   {
