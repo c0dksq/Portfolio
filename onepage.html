@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>c0d Design — Graphic Designer</title>
+<meta name="description" content="Graphic design portfolio: all projects on one page.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* One-page additions */
+  html { scroll-padding-top: 110px; }
+  .project-section { border-top: 3px solid var(--ink); padding-bottom: 40px; }
+  .work-intro { padding: 90px var(--pad) 40px; max-width: var(--max-w); margin: 0 auto; }
+  .work-intro h2 { font-family: var(--font-display); font-weight: 400; font-size: clamp(3rem, 9vw, 7rem); line-height: .95; text-transform: uppercase; margin: 12px 0 28px; }
+  .project-jump { display: flex; flex-wrap: wrap; gap: 10px; }
+  .project-jump a { font-family: var(--font-mono); font-size: .8rem; font-weight: 700; text-decoration: none; border: 2px solid var(--ink); padding: 8px 14px; }
+  .project-jump a:hover { background: var(--ink); color: var(--paper); }
+  /* Collapsible projects */
+  .project-bar { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; }
+  .project-bar .case-title { margin-bottom: 0; }
+  .project-toggle { font-family: var(--font-mono); font-weight: 700; font-size: .85rem; text-transform: uppercase; letter-spacing: .04em; background: var(--ink); color: var(--paper); border: 3px solid var(--ink); padding: 14px 22px; cursor: pointer; }
+  .project-toggle:hover { background: var(--accent); border-color: var(--accent); }
+  .project-toggle[aria-expanded="true"] { background: var(--paper); color: var(--ink); }
+  .project-toggle[aria-expanded="true"]:hover { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+  .project-section .case-hero { cursor: pointer; }
+  .project-sub-wrap { max-width: var(--max-w); margin: 0 auto; padding: 40px var(--pad) 0; }
+  .project-panel[hidden] { display: none; }
+  .work-loading { padding: 40px var(--pad); font-family: var(--font-mono); }
+</style>
+<style>
+  .nav__links a.nav__switch { border: 2px solid var(--ink); padding: 6px 12px; }
+  .nav__links a.nav__switch::after { display: none; }
+  .nav__links a.nav__switch:hover { background: var(--ink); color: var(--paper); }
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a href="#top" class="nav__mark"><img src="image/logo/emblem1.svg" alt="c0d Design" class="nav__logo"></a>
+  <nav class="nav__links">
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="index.html" class="nav__switch">Multi-page view</a>
+  </nav>
+  <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+</header>
+
+<main>
+  <section class="hero" id="top">
+    <div class="hero__marquee" aria-hidden="true"><div class="hero__marquee-track" id="heroMarqueeTrack"></div></div>
+    <div class="hero__foot">
+      <p class="hero__role" id="heroRole"></p>
+      <p class="hero__tagline" id="heroTagline"></p>
+      <a href="#work" class="hero__scroll">See the work ↓</a>
+    </div>
+  </section>
+
+  <div class="ticker" aria-hidden="true"><div class="ticker__track" id="tickerTrack"></div></div>
+
+  <section id="work">
+    <div class="work-intro">
+      <span class="section-label" id="projectCount">Projects</span>
+      <h2>Everything<br>I've created</h2>
+      <nav class="project-jump" id="projectJump" aria-label="Jump to a project"></nav>
+    </div>
+    <div id="projectMount"><p class="work-loading">Loading projects…</p></div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="section-head"><span class="section-label">About</span></div>
+    <div class="about__body">
+      <p class="about__lead" id="aboutText"></p>
+      <ul class="about__facts" id="aboutFacts"></ul>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="section-head"><span class="section-label">Get In Touch</span></div>
+    <a class="contact__email" id="contactEmail" href="#"></a>
+    <div class="contact__social" id="contactSocial"></div>
+  </section>
+</main>
+
+<footer class="footer">
+  <span id="footerName"></span>
+  <span>Built with GitHub Pages</span>
+</footer>
+
+<script src="script.js"></script>
+<script>
+/* Builds the one-page projects from your normal case-study pages.
+   It reads the PROJECTS list in script.js, opens each project's .html page,
+   and copies its content in. Add a project to PROJECTS and it appears here.
+   Each project shows its cover first; "View work" opens the rest. */
+(function () {
+  var mount = document.getElementById("projectMount");
+  var jump = document.getElementById("projectJump");
+  var count = document.getElementById("projectCount");
+  var esc = function (s) {
+    return String(s).replace(/[&<>"]/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
+    });
+  };
+
+  function parseProject(htmlText, link) {
+    var doc = new DOMParser().parseFromString(htmlText, "text/html");
+    var q = function (sel) { return doc.querySelector(sel); };
+    var title = q(".case-title");
+    if (!title) return null;
+    var heroImg = q(".case-hero img");
+    return {
+      id: link.replace(/\.html$/i, "").replace(/[^a-z0-9_-]/gi, "-"),
+      label: q(".section-label") ? q(".section-label").textContent.trim() : "",
+      title: title.innerHTML.trim(),
+      titleText: title.textContent.trim(),
+      sub: q(".case-sub") ? q(".case-sub").innerHTML.trim() : "",
+      hero: heroImg ? heroImg.getAttribute("src") : "",
+      details: Array.prototype.map.call(doc.querySelectorAll(".case-details li"), function (li) {
+        return Array.prototype.map.call(li.children, function (c) { return c.textContent.trim(); });
+      }).filter(function (d) { return d[1] && d[1] !== "Your role"; }),
+      paras: Array.prototype.map.call(doc.querySelectorAll(".case-text p"), function (p) {
+        return p.innerHTML.trim();
+      }).filter(Boolean),
+      gallery: Array.prototype.map.call(doc.querySelectorAll(".case-gallery img"), function (i) {
+        return i.getAttribute("src");
+      })
+    };
+  }
+
+  function render(p) {
+    var alt = esc(p.titleText);
+    return '<article class="project-section" id="' + p.id + '" data-title="' + alt + '">' +
+      '<div class="case-header project-bar"><div><span class="section-label">' + esc(p.label) + '</span>' +
+      '<h3 class="case-title">' + p.title + '</h3></div>' +
+      '<button type="button" class="project-toggle" aria-expanded="false" aria-controls="' + p.id + '-panel" aria-label="View work: ' + alt + '">View work</button></div>' +
+      (p.hero ? '<section class="case-hero"><img src="' + p.hero + '" alt="' + alt + '" loading="lazy"></section>' : '') +
+      '<div class="project-panel" id="' + p.id + '-panel" hidden>' +
+      (p.sub ? '<div class="project-sub-wrap"><p class="case-sub">' + p.sub + '</p></div>' : '') +
+      '<section class="case-body"><ul class="case-details">' +
+      p.details.map(function (d) { return "<li><span>" + esc(d[0]) + "</span><span>" + esc(d[1]) + "</span></li>"; }).join("") +
+      '</ul><div class="case-text">' + p.paras.map(function (t) { return "<p>" + t + "</p>"; }).join("") + '</div></section>' +
+      (p.gallery.length ? '<section class="case-gallery">' + p.gallery.map(function (g, i) {
+        return '<img data-src="' + g + '" alt="' + alt + " — image " + (i + 1) + '" loading="lazy">';
+      }).join("") + '</section>' : '') +
+      '</div></article>';
+  }
+
+  function setOpen(article, open) {
+    var btn = article.querySelector(".project-toggle");
+    var panel = article.querySelector(".project-panel");
+    if (open) {
+      Array.prototype.forEach.call(panel.querySelectorAll("img[data-src]"), function (img) {
+        img.src = img.getAttribute("data-src");
+        img.removeAttribute("data-src");
+      });
+    }
+    panel.hidden = !open;
+    btn.setAttribute("aria-expanded", String(open));
+    btn.textContent = open ? "Hide work" : "View work";
+    btn.setAttribute("aria-label", (open ? "Hide work: " : "View work: ") + article.getAttribute("data-title"));
+  }
+
+  function openFromHash(scroll) {
+    var id = decodeURIComponent(location.hash.slice(1));
+    var el = id && document.getElementById(id);
+    if (el && el.classList.contains("project-section")) {
+      setOpen(el, true);
+      if (scroll) el.scrollIntoView();
+    }
+  }
+
+  mount.addEventListener("click", function (e) {
+    var hit = e.target.closest(".project-toggle, .case-hero");
+    if (!hit) return;
+    var article = hit.closest(".project-section");
+    setOpen(article, article.querySelector(".project-panel").hidden);
+  });
+  jump.addEventListener("click", function (e) {
+    var a = e.target.closest("a");
+    if (!a) return;
+    var el = document.getElementById(a.getAttribute("href").slice(1));
+    if (el) setOpen(el, true);
+  });
+  window.addEventListener("hashchange", function () { openFromHash(false); });
+
+  var items = PROJECTS.filter(function (p) {
+    return p.link && /\.html$/i.test(p.link) && !/^https?:/i.test(p.link);
+  });
+
+  Promise.all(items.map(function (p) {
+    return fetch(p.link)
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
+      .then(function (t) { return parseProject(t, p.link); })
+      .catch(function (e) { console.warn("Could not load " + p.link, e); return null; });
+  })).then(function (results) {
+    var ok = results.filter(Boolean);
+    if (!ok.length) {
+      mount.innerHTML = '<p class="work-loading">Couldn’t load the projects. This page needs to be opened from the live site (or a local web server), not as a file on your computer.</p>';
+      return;
+    }
+    count.textContent = String(ok.length).padStart(2, "0") + " Projects";
+    jump.innerHTML = ok.map(function (p) { return '<a href="#' + p.id + '">' + esc(p.titleText) + "</a>"; }).join("");
+    mount.innerHTML = ok.map(render).join("");
+    openFromHash(true);
+  });
+})();
+</script>
+</body>
+</html>
